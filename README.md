@@ -133,3 +133,7 @@ Keys for SecureStorage only support `[A-Za-z0-9.-_]`, meaning all other characte
 You may change this character by replacing `options.replaceCharacter`.
 
 You may also change the default key transformer by replacing `options.replacer`.
+
+## Note
+
+Inspired by [redux-persist-sensitive-storage](https://github.com/CodingZeal/redux-persist-sensitive-storage) (which required a native module).
