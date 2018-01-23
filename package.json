@@ -1,0 +1,13 @@
+{
+  "name": "redux-persist-expo-securestore",
+  "version": "0.1.0",
+  "description": "redux-persist storage for Expo's SecureStore",
+  "main": "src/index.js",
+  "repository": "git@github.com:Cretezy/redux-persist-expo-securestore.git",
+  "author": "Charles Crete <charles@cretezy.com>",
+  "license": "MIT",
+  "private": false,
+  "peerDependencies": {
+    "expo": ">=20"
+  }
+}
