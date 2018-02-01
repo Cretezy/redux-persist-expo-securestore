@@ -88,7 +88,7 @@ function configureStore () {
 
 #### `[options]`: `object`
 
-Options to pass to [Expo's SecureStore](https://docs.expo.io/versions/latest/sdk/securestore.html).
+Options to pass to [Expo's SecureStore](https://docs.expo.io/versions/latest/sdk/securestore.html):
 
 ##### `keychainService`: `string`
 
@@ -114,17 +114,19 @@ iOS only: Specifies when the stored entry is accessible, using iOS’s kSecAttrA
 
 > Expo.SecureStore.ALWAYS_THIS_DEVICE_ONLY: Similar to ALWAYS, except the entry is not migrated to a new device when restoring from a backup.
 
+redux-persist-expo-securestore specific options:
+
 ##### `replaceCharacter`: `string`
 
 Default: `_`
 
-See `Caveat`.
+See [caveat](#caveat).
 
 ##### `replacer`: `function(key: string, replaceCharacter: string): string`
 
 Default: replace all illegal characters by `replaceCharacter`
 
-See `Caveat`.
+See [caveat](#caveat).
 
 ## Caveat
 
