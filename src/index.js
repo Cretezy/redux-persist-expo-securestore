@@ -10,7 +10,7 @@ export default function createSecureStorage(options = {}) {
 		setItem: (key, value) =>
 			SecureStore.setItemAsync(replacer(key, replaceCharacter), value, options),
 		removeItem: key =>
-			SecureStore.removeItemAsync(replacer(key, replaceCharacter), options)
+			SecureStore.deleteItemAsync(replacer(key, replaceCharacter), options)
 	};
 }
 
