@@ -1,9 +1,9 @@
 {
   "name": "redux-persist-expo-securestore",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "redux-persist storage for Expo's SecureStore",
   "main": "src/index.js",
-  "types": "./src/index.d.ts",
+  "types": "src/index.d.ts",
   "repository": "git@github.com:Cretezy/redux-persist-expo-securestore.git",
   "author": "Charles Crete <charles@cretezy.com>",
   "license": "MIT",
