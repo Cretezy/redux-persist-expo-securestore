@@ -1,6 +1,6 @@
 {
   "name": "redux-persist-expo-securestore",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "redux-persist storage for Expo's SecureStore",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -9,6 +9,6 @@
   "license": "MIT",
   "private": false,
   "peerDependencies": {
-    "expo": ">=20"
+    "expo-secure-store": "^5.0.1"
   }
 }
