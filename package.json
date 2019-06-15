@@ -9,6 +9,6 @@
   "license": "MIT",
   "private": false,
   "peerDependencies": {
-    "expo": ">=20"
+    "expo": ">=32.0.0"
   }
 }
