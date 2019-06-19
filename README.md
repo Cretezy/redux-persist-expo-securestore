@@ -82,6 +82,16 @@ function configureStore () {
 }
 ```
 
+## Jest integration
+
+You will need to update [`transformIgnorePatterns`](https://jestjs.io/docs/en/configuration.html#transformignorepatterns-array-string) to exclude this module, as it exports untranspiled code.
+
+As an example, the following is the suggested `transformIgnorePatterns` from the [Expo docs](https://docs.expo.io/versions/latest/guides/testing-with-jest/#jest-configuration) with `redux-persist-expo-securestore` also whitelisted:
+
+```
+node_modules/(?!((jest-)?react-native|react-clone-referenced-element|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|sentry-expo|native-base|redux-persist-expo-securestore))
+```
+
 ## API
 
 ### `createSecureStore([options])`
