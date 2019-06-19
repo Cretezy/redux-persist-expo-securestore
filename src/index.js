@@ -1,4 +1,4 @@
-import { SecureStore } from "expo";
+import * as SecureStore from 'expo-secure-store';
 
 export default function createSecureStorage(options = {}) {
 	const replaceCharacter = options.replaceCharacter || "_";

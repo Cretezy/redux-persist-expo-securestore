@@ -28,13 +28,13 @@ import reducers from "./reducers";
 // Secure storage
 const storage = createSecureStore();
 const config = {
-    key: "root",
-    storage
+  key: "root",
+  storage
 };
 
 const reducer = persistCombineReducers(config, reducers);
 
-function configureStore () {
+function configureStore() {
   // ...
   let store = createStore(reducer);
   let persistor = persistStore(store);
@@ -50,7 +50,7 @@ import createSecureStore from "redux-persist-expo-securestore";
 
 import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
-import AsyncStorage from 'redux-persist/lib/storage';
+import AsyncStorage from "redux-persist/lib/storage";
 
 import { mainReducer, secureReducer } from "./reducers";
 
@@ -73,7 +73,7 @@ const rootReducer = combineReducers({
   secure: persistReducer(securePersistConfig, secureReducer)
 });
 
-function configureStore () {
+function configureStore() {
   // ...
   let store = createStore(rootReducer);
   let persistor = persistStore(store);
@@ -98,7 +98,7 @@ node_modules/(?!((jest-)?react-native|react-clone-referenced-element|expo(nent)?
 
 #### `[options]`: `object`
 
-Options to pass to [Expo's SecureStore](https://docs.expo.io/versions/latest/sdk/securestore.html):
+Options to pass to [Expo's SecureStore](https://docs.expo.io/versions/latest/sdk/securestore/):
 
 ##### `keychainService`: `string`
 
