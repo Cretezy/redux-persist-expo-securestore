@@ -1,6 +1,6 @@
 declare module "redux-persist-expo-securestore" {
   export interface Options {
-    replaceCharacter?: string
+    replaceCharacter?: string;
     replacer: (key: string, replaceCharacter: string) => string;
   }
 
@@ -12,5 +12,5 @@ declare module "redux-persist-expo-securestore" {
     removeItem(key: string): Promise<void>;
   }
 
-  export default function (options?: Options): ReduxPersistExpoSecureStore
+  export default function(options?: Options): ReduxPersistExpoSecureStore;
 }

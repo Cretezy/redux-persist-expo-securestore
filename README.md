@@ -10,9 +10,11 @@ Storage engine for [redux-persist](https://github.com/rt2zz/redux-persist) for u
 
 Requires Expo SDK (automatically used when using [Expo](https://expo.io/) or [create-react-native-app](https://github.com/react-community/create-react-native-app)).
 
-Yarn: `yarn add redux-persist-expo-securestore`
-
-npm: `npm install --save redux-persist-expo-securestore`
+```bash
+yarn add redux-persist-expo-securestore
+# or
+npm install --save redux-persist-expo-securestore
+```
 
 ## Usage
 
@@ -21,12 +23,13 @@ Use as a `redux-persist` global storage engine:
 ```js
 import createSecureStore from "redux-persist-expo-securestore";
 
-import { compose, applyMiddleware, createStore } from "redux";
+import { createStore } from "redux";
 import { persistStore, persistCombineReducers } from "redux-persist";
 import reducers from "./reducers";
 
 // Secure storage
 const storage = createSecureStore();
+
 const config = {
   key: "root",
   storage
@@ -36,8 +39,8 @@ const reducer = persistCombineReducers(config, reducers);
 
 function configureStore() {
   // ...
-  let store = createStore(reducer);
-  let persistor = persistStore(store);
+  const store = createStore(reducer);
+  const persistor = persistStore(store);
 
   return { persistor, store };
 }
@@ -56,6 +59,7 @@ import { mainReducer, secureReducer } from "./reducers";
 
 // Secure storage
 const secureStorage = createSecureStore();
+
 const securePersistConfig = {
   key: "secure",
   storage: secureStorage
