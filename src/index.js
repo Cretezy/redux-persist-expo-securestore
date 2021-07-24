@@ -1,6 +1,6 @@
-import * as SecureStore from "expo-secure-store";
+const SecureStore = require("expo-secure-store");
 
-export default function createSecureStorage(options = {}) {
+module.exports = function createSecureStorage(options = {}) {
   const replaceCharacter = options.replaceCharacter || "_";
   const replacer = options.replacer || defaultReplacer;
 
